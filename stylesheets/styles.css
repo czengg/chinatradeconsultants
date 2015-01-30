@@ -1,0 +1,293 @@
+/* ALL */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.background {
+  width: 100%;
+  min-width: 775px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section h1, h3, h5 {
+  font-weight: 100;
+}
+
+.section {
+  min-width: 775px;
+}
+
+.section .container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+
+  /*background*/
+  background-color: rgb(53, 63, 70);
+  background-color: rgba(53, 63, 70, .85);
+  width: 100%;
+  min-width: 775px;
+
+  /*positioning*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header .logo {
+  display: none;
+}
+
+.header .logo.show {
+  display: block;
+}
+
+.nav-bar {
+  color: #ffffff;
+  
+  /*text*/
+  text-align: center;
+}
+
+.nav-bar ul {
+  padding: 0 10px;
+  list-style: none;
+  position: relative;
+  
+}
+
+.nav-bar li {
+  display: inline;
+  text-align: center;
+}
+
+.nav-bar li.separator {
+  margin: 0 1%;
+}
+
+.nav-bar li.active {
+  font-weight: 700;
+}
+
+/* LANDING PANEL */
+.landing .welcome-banner {
+  /* positioning */
+  position: absolute;
+  width: 100%;
+  min-width: 775px;
+  top: 150px;
+
+  /* center text */
+  color: #ffffff;
+  text-align: center;
+}
+
+.landing .welcome-banner h1 span, .landing .welcome-banner h3 span {
+  /* background */
+  background-color: rgb(53, 63, 70);
+  background-color: rgba(53, 63, 70, .85);
+  padding: 5px 15px;
+  margin: 0 auto;
+}
+
+.landing .welcome-banner h1 {
+  font-weight: 700;
+}
+
+.landing {
+  text-align: center;
+}
+
+.landing .services-container {
+  /* positioning */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  min-width: 775px;
+
+  /* background*/
+  background-color: #7499c6;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.landing .services {
+  display: inline-block;
+  width: 75%;
+}
+
+.landing .services h1, .landing .services h3, .landing .services p {
+  text-align: left;
+  font-weight: 100;
+}
+
+.landing .services h1 {
+  margin: 25px 0 0 0;
+}
+
+.landing .services ul {
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.landing .services li {
+  display: inline;
+  float: left;
+  max-width: 23%;
+  padding: 5px;
+}
+
+/* PRODUCTS PANEL*/
+.products {
+  background: #ffffff;
+}
+
+.products .products-images .image-container {
+  width: 32.75%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.products .products-images .image-container img {
+  width: 175%;
+  position: relative;
+  left: -35%;
+}
+
+/* TRADE FAIRS */
+.trade-fairs {
+  background: #515f67;
+  color: #ffffff;
+}
+
+/* ABOUT */
+.about {
+  background: #515f67;
+  color: #ffffff;
+}
+
+.about .background {
+  opacity: .25;
+}
+
+.about .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 75%;
+  margin: 0 auto;
+  top: 200px;
+}
+
+.about .container ul {
+  font-size: 12px
+}
+
+.about .top.column {
+  width: 100%;
+  max-width: 675px;
+}
+
+.about .column {
+  width: 50%;
+  display: inline-block;
+}
+
+/* FAQ */
+.faq {
+  background-color: #7499c6;
+  color: #ffffff;
+}
+
+.faq .questions-container ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 12px;
+  vertical-align: text-top
+}
+
+.faq .questions-container li {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin: 5px 0;
+}
+
+.faq .questions-container li a.question.plus:before {
+  content: "+";
+  padding-right: 5px;
+}
+
+.faq .questions-container li a.question.minus:before {
+  content: "-";
+  padding-right: 5px;
+}
+
+.faq .questions-container li a.question {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.faq .questions-container li.answer {
+  text-indent: 0em;
+  display: none;
+  margin-bottom: 25px;
+}
+
+.faq .column {
+  width: 49%;
+  display: inline-block;
+}
+
+/* CONTACT */
+.contact {
+  background: #515f67;
+  color: #ffffff;
+}
+
+.contact .background {
+  opacity: .25;
+}
+
+.contact .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 75%;
+  margin: 0 auto;
+  top: 200px;
+}
+
+.contact form input {
+  border: none;
+  opacity: .75;
+  height: 30px;
+  width: 100%;
+}
+
+.contact h5 {
+  margin: 10px 0;
+}
+
+.contact .form-column-one, .contact .form-column-one {
+  display: inline-block;
+  width: 45%;
+}
