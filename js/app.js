@@ -7,7 +7,7 @@ $(document).ready(function() {
       resize: false,
 
       menu: '#menu',
-      anchors: ['landing', 'products', 'trade-fairs', 'about', 'faq', 'contacts'],
+      anchors: ['landing', 'services', 'products', 'trade-fairs', 'about', 'faq', 'contacts'],
 
       onLeave: function(index, nextIndex, direction) {
         if (nextIndex === 1) {

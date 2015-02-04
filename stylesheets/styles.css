@@ -33,6 +33,22 @@ a {
   margin: 0 auto;
 }
 
+.two-third {
+  width: 66%;
+}
+
+.one-third {
+  width: 33%;
+}
+
+.column-left {
+  float: left;
+}
+
+.column-right {
+  float: right;
+}
+
 /* HEADER */
 .header {
 
@@ -51,10 +67,27 @@ a {
 
 .header .logo {
   display: none;
+  text-align: left;
+  width: 50%;
+  height: 100px;
+
+  background: -moz-linear-gradient(left right,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.64) 34%, rgba(255,255,255,1) 53%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(34%,rgba(255,255,255,0.64)), color-stop(53%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.64) 34%,rgba(255,255,255,1) 53%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.64) 34%,rgba(255,255,255,1) 53%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.64) 34%,rgba(255,255,255,1) 53%); /* IE10+ */
+  background: linear-gradient(to left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.64) 34%,rgba(255,255,255,1) 53%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
 }
 
 .header .logo.show {
   display: block;
+}
+
+.header .logo img {
+  height: 50px;
+  padding: 25px;
 }
 
 .nav-bar {
@@ -85,19 +118,22 @@ a {
 }
 
 /* LANDING PANEL */
-.landing .welcome-banner {
+.landing .welcome-banner, .landing .scroll-instruction {
   /* positioning */
   position: absolute;
   width: 100%;
   min-width: 775px;
-  top: 150px;
-
+  
   /* center text */
   color: #ffffff;
   text-align: center;
 }
 
-.landing .welcome-banner h1 span, .landing .welcome-banner h3 span {
+.landing .welcom-banner {
+  top: 300px;
+}
+
+.landing span {
   /* background */
   background-color: rgb(53, 63, 70);
   background-color: rgba(53, 63, 70, .85);
@@ -113,45 +149,54 @@ a {
   text-align: center;
 }
 
-.landing .services-container {
-  /* positioning */
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  min-width: 775px;
+.landing .scroll-instruction {
+  bottom: 50px;
+}
 
+#scrollInstruction {
+  display: none;
+}
+
+/* SERVICES PANEL */
+.services {
   /* background*/
   background-color: #7499c6;
 
   text-align: center;
   color: #ffffff;
-}
-
-.landing .services {
   display: inline-block;
   width: 75%;
 }
 
-.landing .services h1, .landing .services h3, .landing .services p {
-  text-align: left;
-  font-weight: 100;
+.services .services-container {
+  /* positioning */
+  min-width: 775px;
 }
 
-.landing .services h1 {
+.services .logo {
+  height: 75px;
+}
+
+.services h1 {
   margin: 25px 0 0 0;
+  font-weight: 100;
+  text-align: left;
 }
 
-.landing .services ul {
+.services ul {
   padding: 0;
+  margin: 50px 0 0 0;
   list-style: none;
   position: relative;
 }
 
-.landing .services li {
+.services li {
   display: inline;
   float: left;
   max-width: 23%;
   padding: 5px;
+  text-align: left;
+  font-weight: 100;
 }
 
 /* PRODUCTS PANEL*/
@@ -175,6 +220,25 @@ a {
 .trade-fairs {
   background: #515f67;
   color: #ffffff;
+}
+
+.trade-fairs img {
+  width: 100%;
+}
+
+.trade-fairs button {
+  background: none repeat scroll 0 0 #7499c6;
+  border: medium none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 25px;
+  font-weight: 700;
+  margin: 25px;
+}
+
+.trade-fairs button:hover {
+  background: #ffffff;
+  color: #7499c6;
 }
 
 /* ABOUT */
@@ -276,18 +340,35 @@ a {
   top: 200px;
 }
 
-.contact form input {
+.contact form input, .contact form textarea {
   border: none;
   opacity: .75;
   height: 30px;
-  width: 100%;
+  width: 80%;
+  padding: 5px 15px;
+}
+
+.contact form textarea {
+  width: 85%;
+  height: 125px;
+  font-family: Helvetica;
+  font-size: 12px;
 }
 
 .contact h5 {
-  margin: 10px 0;
+  margin: 25px 0 5px 0;
 }
 
-.contact .form-column-one, .contact .form-column-one {
+.contact p {
+  margin: 0;
+}
+
+.contact .form-column-one, .contact .form-column-two {
   display: inline-block;
   width: 45%;
+  vertical-align: text-top;
+}
+
+.contact .form-column-one {
+  margin: 0 4% 0 0;
 }

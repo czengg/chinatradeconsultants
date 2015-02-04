@@ -19,12 +19,18 @@
     <div id="fullpage">
       <div class="header" id="menu">
         <div class="logo">
-          <img src=""></img>
+          <img src="images/ctc-logo.png"></img>
         </div>
         <div class="nav-bar">
           <ul>
             <li data-menuanchor="landing">
-              <a href="#landing">SERVICES</a>
+              <a href="#landing">HOME</a>
+            </li>
+            <li class="separator">
+              |
+            </li>
+            <li data-menuanchor="services">
+              <a href="#services">SERVICES</a>
             </li>
             <li class="separator">
               |
@@ -48,13 +54,13 @@
               |
             </li>
             <li data-menuanchor="faq">
-              <a href="faq">FAQ</a>
+              <a href="#faq">FAQ</a>
             </li>
             <li class="separator">
               |
             </li>
             <li data-menuanchor="contacts">
-              <a href="contacts">CONTACTS</a>
+              <a href="#contacts">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -66,29 +72,35 @@
           <h1><span>WELCOME TO CHINA TRADE CONSULTANTS</span></h1>
           <h3><span>YOUR TRUSTED CONNECTION TO CHINA</span></h3>
         </div>
+        <div class="scroll-instruction" onmouseover="$('#scrollInstruction').show()" onmouseout="$('#scrollInstruction').hide()">
+          <h5 id="scrollInstruction"><span>Scroll down for more</span></h5>
+          <span><img src="images/scroll.png"></img></span>
+        </div>
+      </div>
+      <div class="services section">
         <div class="services-container">
           <div class="services">
             <h1>SERVICES</h1>
             <ul>
               <li>
-                <img class="logo"></img>
+                <img class="logo" src="images/coffee.png"></img>
                 <h3>FINANCIAL PROFILE</h3>
                 <p>Once you identified potential companies to either buy, sell or begin to discuss a joint venture with, we can produce a clearer and in-depth picture of the company's
                 financial health.</p>
               </li>
               <li>
-                <img class="logo"></img>
+                <img class="logo" src="images/some-thing.png"></img>
                 <h3>INDUSTRY REPORTS</h3>
                 <p>China Trade Consultants, Inc. (CTC) prepares customized reports that will identify information ranging from output, consumption, key players, relevant law and policy in your selected market sector.</p>
               </li>
               <li>
-                <img class="logo"></img>
+                <img class="logo" src="images/third.png"></img>
                 <h3>TRANSLATION SERVICES</h3>
                 <p>We can provide a wide array of Translation & Interpretation Services of: Printed Materials, Online Materials, Interpretation During Meetings & Teleconferences in the US and in China
                 </p>
               </li>
               <li>
-                <img class="logo"></img>
+                <img class="logo" src="images/fourth.png"></img>
                 <h3>CULTURAL TRAINING</h3>
                 <p>We reports on options for teaming up with overseas companies with statistics on: target markets, output, consumption, imports/exports, joint ventures, law, policy, and company-specific information. </p>
               </li>
@@ -98,6 +110,11 @@
       </div>
       <div class="products section">
         <div class="container">
+          <div class="products-images">
+            <div class="image-container"><img src="images/iStock_000023563078_Large.jpg"></img></div>
+            <div class="image-container"><img src="images/iStock_000019239840_Large.jpg"></img></div>
+            <div class="image-container"><img src="images/iStock_000043904080_Large.jpg"></img></div>
+          </div>
           <h1>BUY/SELL PRODUCTS</h1>
           <p class="products-text">If you're looking to import intermediate or finished goods from China, China Trade Consultants, Inc. (CTC) can use any, or all, of our numerous capabilities to your competitive advantage.
 
@@ -112,18 +129,19 @@
           Executive Briefings/Cultural Training to make you aware of local customs and business conditions.
           Translation & Interpretation Services to help you understand printed and online materials, and to assist you in meetings and teleconferences in the U.S. and in China.
           Product Promotion , with assistance from our skilled marketing professionals.</p>
-          <div class="products-images">
-            <div class="image-container"><img src="images/iStock_000023563078_Large.jpg"></img></div>
-            <div class="image-container"><img src="images/iStock_000019239840_Large.jpg"></img></div>
-            <div class="image-container"><img src="images/iStock_000043904080_Large.jpg"></img></div>
-          </div>
+          
         </div>
       </div>
       <div class="trade-fairs section">
         <div class="container">
-          <h1>TRADE FAIRS</h1>
-          <img src="images/Tradeshow.jpg"></img>
-          <p>For a complete look at what trade shows are available in China this year, please visit <a href="http://www.biztradeshows.com/china/"><u>http://www.biztradeshows.com/china/</u></a>. If you see one that you would be interested in attending or learning more about, please contact our professionals to help you get the information you need.</p>
+          <div class="one-third column-left">
+            <h1>TRADE FAIRS</h1>
+            <p>For a complete look at what trade shows are available in China this year, please visit <a href="http://www.biztradeshows.com/china/"><u>http://www.biztradeshows.com/china/</u></a>. If you see one that you would be interested in attending or learning more about, please contact our professionals to help you get the information you need.</p>
+            <button onclick="location.href = 'http://www.biztradeshows.com/china/'">VIEW FAIRS</button>
+          </div>
+          <div class="two-third column-right">
+            <img src="images/Tradeshow.jpg"></img>
+          </div>
         </div>
       </div>
       <div class="about section">
@@ -197,6 +215,18 @@
               <div class="email">
                 <h5>EMAIL</h5>
                 <input type="text" name="email">
+              </div>
+              <div class="contact-info">
+                <h5>DAVE LEVY</h5>
+                <p>4 Smithfield Street</p>
+                <p>USA - Pittsburgh PA 15129</p>
+                <p>1-412-201-1900 EX. 22</p>
+              </div>
+            </div>
+            <div class="form-bottom-row">
+              <div class="message">
+                <h5>MESSAGE</h5>
+                <textarea name="message"></textarea>
               </div>
             </div>
           </div>
