@@ -82,54 +82,74 @@
           <div class="services">
             <h1>SERVICES</h1>
             <ul>
-              <li>
+              <li onclick="showBox('financial');">
                 <img class="logo" src="images/coffee.png"></img>
                 <h3>FINANCIAL PROFILE</h3>
                 <p>Once you identified potential companies to either buy, sell or begin to discuss a joint venture with, we can produce a clearer and in-depth picture of the company's
                 financial health.</p>
               </li>
-              <li>
+              <li onclick="showBox('industry');">
                 <img class="logo" src="images/some-thing.png"></img>
                 <h3>INDUSTRY REPORTS</h3>
                 <p>China Trade Consultants, Inc. (CTC) prepares customized reports that will identify information ranging from output, consumption, key players, relevant law and policy in your selected market sector.</p>
               </li>
-              <li>
+              <li onclick="showBox('translation');">
                 <img class="logo" src="images/third.png"></img>
                 <h3>TRANSLATION SERVICES</h3>
                 <p>We can provide a wide array of Translation & Interpretation Services of: Printed Materials, Online Materials, Interpretation During Meetings & Teleconferences in the US and in China
                 </p>
               </li>
-              <li>
+              <li onclick="showBox('cultural');">
                 <img class="logo" src="images/fourth.png"></img>
                 <h3>CULTURAL TRAINING</h3>
                 <p>We reports on options for teaming up with overseas companies with statistics on: target markets, output, consumption, imports/exports, joint ventures, law, policy, and company-specific information. </p>
               </li>
+              <div id="services-description">
+
+              </div>
             </ul>
+
           </div>
+
         </div>
       </div>
       <div class="products section">
         <div class="container">
-          <div class="products-images">
+          <div class="products-images left-column">
             <div class="image-container"><img src="images/iStock_000023563078_Large.jpg"></img></div>
             <div class="image-container"><img src="images/iStock_000019239840_Large.jpg"></img></div>
             <div class="image-container"><img src="images/iStock_000043904080_Large.jpg"></img></div>
           </div>
-          <h1>BUY/SELL PRODUCTS</h1>
-          <p class="products-text">If you're looking to import intermediate or finished goods from China, China Trade Consultants, Inc. (CTC) can use any, or all, of our numerous capabilities to your competitive advantage.
+          <div class="right-column">
+            <h1>BUY/SELL PRODUCTS</h1>
+            <div class="content">
+              <h3 onclick="show('best-deals')">Getting the Best Deals from China</h3>
+              <div class="content sub-content" id="best-deals">
+                <p>If you're looking to import intermediate or finished goods from China, China Trade Consultants, Inc. (CTC) can use any, or all, of our numerous capabilities to your competitive advantage.</p>
+                <p>We'll tap into our extensive network of contacts to be your surrogate sales agent in China, setting up meetings <i>in advance</i> of your trip, visiting factories, meeting with plant management, and identifying key prospects or suppliers so that you can make informed, and profitable, business decisions and maximize the efficiency of your visits to China.</p>
+                <p>CTC's customized <b>Industry</b> and <b>Financial Profile Reports</b> will give you a realistic picture of potential trading partners and company financials.</p>
+                <p>And to assist you in your business transactions we can provide you with <b>Executive Briefings/Cultural Training</b> to make you aware of local business customs and relevant legal considerations.</p>
+              </div>
+              <h3 onclick="show('action')">Get a Piece of the Action</h3>
+              <div class="content sub-content" id="action">
+                <p>With U.S. exports to China up 36% during the first half of 2004 compared to the same period of 2003, you should be a part of that encouraging statistic.</p>
+                <p>Doing business in China can be costly if you're "flying blind". </p>
+                <p>To make sure you're doing things correctly from the beginning, China Trade Consultants, Inc. (CTC) can provide you with:</p>
+                <ul class="content">
+                  <li><p><b>Industry Reports</b> will identify market size, consumption, key players and more.</p></li>
+                  <li><p><b>Financial Profile Reports</b> provide you with a financial snapshot of your potential trading partners.</p></li>
+                  <li><p><b>Bidding Opportunities</b>: research and qualify potential sales opportunities.</p></li>
+                  <li><p><b>Industry-Specific Sales Representation</b> to give your company a presence in China.</p></li>
+                  <li><p><b>Executive Briefings/Cultural Training</b> to make you aware of local customs and business conditions.</p></li>
+                  <li><p><b>Translation & Interpretation Services</b> to help you understand printed and online materials, and to assist you in meetings and teleconferences in the U.S. and in China.</p></li>
+                  <li><p><b>Product Promotion</b>, with assistance from our skilled marketing professionals.</p></li>
+                </ul>
+                <p>For a summary of our services and fees, <a href="http://chinatci.com/services-offered.htm"><b>click here</b></a>.</p>
+              </div>
+            </div>
 
-          We'll tap into our extensive network of contacts to be your surrogate sales agent in China, setting up meetings in advance of your trip, visiting factories, meeting with plant management, and identifying key prospects or suppliers so that you can make informed, and profitable, business decisions and maximize the efficiency of your visits to China.
-
-          To make sure you're doing things correctly from the beginning, China Trade Consultants, Inc. (CTC) can provide you with:
-
-          Industry Reports will identify market size, consumption, key players and more.
-          Financial Profile Reports provide you with a financial snapshot of your potential trading partners.
-          Bidding Opportunities: research and qualify potential sales opportunities.
-          Industry-Specific Sales Representation to give your company a presence in China.
-          Executive Briefings/Cultural Training to make you aware of local customs and business conditions.
-          Translation & Interpretation Services to help you understand printed and online materials, and to assist you in meetings and teleconferences in the U.S. and in China.
-          Product Promotion , with assistance from our skilled marketing professionals.</p>
-          
+            <p class="products-text"></p>
+          </div>
         </div>
       </div>
       <div class="trade-fairs section">
@@ -233,5 +253,35 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function showBox(service) {
+        var box = $('#services-description');
+        var financial = "<div><h3>A Financial Outlook</h3><p>Once you identified potential companies to either buy, sell or begin to discuss a joint venture with, we can produce a clearer and in-depth picture of the company's financial health.</p></div><div class='content'><h5><span>Financial Profile Reports</span></h5><div class='content'><ul><li><p>Fee: $1,095</p></li><li><p>$1,895 includes 2 additional updates within 12 months</p></li></ul></div><p>To view a sample financial profile, <a href='http://chinatci.com/sample-company-analysis.pdf'><b>click here</b></a></p></div><h3 id='close' onclick=\"$('#services-description').hide()\"><b>x</b></h3>";
+
+        var industry = "<div><h3>Bring Chinese Business Sectors Into Focus</h3><div class='content'><p>To learn more about the markets you want to sell into, let China Trade Consultants, Inc. (CTC) prepare customized reports that will identify information ranging from output, consumption, key players, relevant law and policy in your selected market sector.</p><p>Over time, as we further refine your focus with your feedback to our reports, we can provide other services to match your growing needs.</p><p>For a condensed sample of a typical Industry Report, <a href='http://chinatci.com/sample-report-aluminum.htm'><b>click here</b></a>.</p></div></div><h3 id='close' onclick=\"$('#services-description').hide()\"><b>x</b></h3>";
+
+        var translation = "<div><h3>Communication to Seal the Deal </h3><div class='content'><p>To prevent language barriers from affecting your ability to sell in China, we can provide you with a wide array of Translation & Interpretation Services, including: </p><ul class='content'><li><p>Translation of Printed Materials</p></li><li><p>Translation of Online Materials</p></li><li><p>Interpretation During Meetings & Teleconferences in the United States</p></li><li><p>Interpretation During Meetings &Teleconferences in China</p></li></ul><p>For a summary of China Trade Consultants, Inc.'s services and fees, <a href='http://chinatci.com/services-offered.htm#translation'><b>click here</b></a>.</p></div></div><h3 id='close' onclick=\"$('#services-description').hide()\"><b>x</b></h3>"
+
+        var cultural = "<div><h3>Make That Critical Connection </h3><div class='content'><p>To help you analyze whether it makes sense to pursue a specific business opportunity yourself, or through a joint venture, China Trade Consultants, Inc. (CTC) can help by researching and reporting on options for teaming up with Chinese companies, as well as with other overseas firms. </p><p>We'll also help you develop a thorough understanding of your target markets by providing statistical information on output, consumption and imports/exports, as well as information on joint ventures, law and policy, and newsworthy company-specific information.</p><p>Our <i>customized</i> <b>Corporate Profile Reports</b>, <b>Industry Reports</b> and <b>Industry-Specific Sales Representation</b> services can help you formulate reasonable expectations at the outset of your China-focused strategic marketing and sales activities.</p><p>For a summary of our services and fees, <a href='http://chinatci.com/services-offered.htm'><b>click here</b></a>.</p></div></div><h3 id='close' onclick=\"$('#services-description').hide()\"><b>x</b></h3>"
+
+        if (service === 'financial') { 
+          box.html(financial);
+        } else if (service === 'industry') {
+          box.html(industry);
+        } else if (service === 'translation') {
+          box.html(translation);
+        } else if (service === 'cultural') {
+          box.html(cultural);
+        }
+
+        box.show();
+      }
+
+      function show(container) {
+        $('.sub-content').slideUp();
+        $('#'+container).slideDown();
+      }
+    </script>
   </body>
 </html>
